@@ -1,4 +1,4 @@
-name: Docker Image CICD.
+name: Docker Image CICD V2
 
 on:
   push:
@@ -31,11 +31,11 @@ jobs:
       id: docker_meta
       uses: docker/metadata-action@v5
       with:
-        images: juanedo/car-web-V6
+        images: juanedo/car-web-V7
         flavor: |
           latest=false
         tags: |
-          type=raw,value=00
+          type=raw,value=01
 
     - name: Build and Push to Docker Hub
       id: docker_build
